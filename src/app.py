@@ -15,6 +15,7 @@ external_stylesheets = [
 ]
 app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.SPACELAB])
 #[dbc.themes.SPACELAB]
+server =app.server
 app.title = "Augtion for 2023!"
 sidebar = dbc.Nav(
             [
