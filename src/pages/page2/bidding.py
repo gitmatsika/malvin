@@ -2,7 +2,7 @@ import dash_bootstrap_components as dbc
 from dash import callback, Output, Input
 import dash
 from dash import dcc, html
-from classBid import *
+from src.classBid import *
 
 mybid =Mybid()
 bids = mybid.readtolist()

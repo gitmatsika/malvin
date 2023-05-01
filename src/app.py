@@ -58,7 +58,7 @@ app.layout = dbc.Container([
 
 if __name__ == "__main__":
     app.run_server(debug=False, host="0.0.0.0", port=8080)
-    server = app.server
+
 
 
  #dbc.Col(html.Div("Auction for 2023",

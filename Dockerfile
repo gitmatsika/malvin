@@ -11,7 +11,7 @@ USER app
 EXPOSE 8080
 #
 #CMD ["python", "app.py"]
-CMD py -m app.py
-#CMD exec gunicorn --bind :$PORT --log-level info --workers 1 --threads 8 --timeout 0 app:server
+#CMD py -m app.py
+CMD exec gunicorn --bind :$PORT --log-level info --workers 1 --threads 8 --timeout 0 app:server
 
 #CMD ["gunicorn"  , "--bind", "0.0.0.0:8080", "app:app"]
