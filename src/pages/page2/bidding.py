@@ -100,11 +100,13 @@ def process_bid(n, email, bid, person):
         try:
             bids = mybid.readtolist()
             auction = mybid.newbid(bids, email, person, bid)
-            mybid.toCsv(auction)
+            #mybid.toCsv(auction)
+
+            print("I am writing here")
         except NameError as err:
             auction = []
             auction = mybid.newbid(auction, email, person, bid)
-            mybid.toCsv(auction)
+            #mybid.toCsv(auction)
             print("i am here")
             print(auction)
         return [html.P("Bid Accepted")]

@@ -52,11 +52,13 @@ class Mybid:
                     currency = "USD"
                     textp = f"Note that there is a new highest bid for {currency} {amt} at {mytime}"
                     textp = textp.title()
-                    self.send_emails(textp, 22)
+                    self.toCsv(bid)
+                    #self.send_emails(textp, 22)
             else:
                 print("You have already tendered a bid, you may want to change your bid price")
         else:
             bid.append(auctiondict)
+            self.toCsv(bid)
         print(bid)
         return bid
 
@@ -68,7 +70,7 @@ class Mybid:
         body = body + "\n" + "\n" + "\n" + " Digital Metrics - Bringing Artificial Intelligence and Data Analytics into your daily operations"
         sender_email = "fmatsika@gmail.com"
         receiver_email = "fmatsika@epicicts.com"
-        password ='rglpugqzzpikikml'
+        password ='gzcfujiukmionmkd'
         #password = 'irsfniijrvpnathr'
         # Create a multipart message and set headers
         message = MIMEMultipart()
